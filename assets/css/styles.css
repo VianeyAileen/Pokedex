@@ -1,0 +1,154 @@
+@import url('https://fonts.cdnfonts.com/css/pokemon-solid');
+*{
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: -webkit-linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5);  /*Chrome 10-25, Safari 5.1-6*/
+    background: linear-gradient(to left, #91EAE4, #86A8E7, #7F7FD5); /*W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+*/
+}
+
+header{
+    text-align: center;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 50px;
+    color: #ffcc03;
+    -webkit-text-stroke: 3px #2a75bb;
+}
+
+h2 {
+    font-family: 'Pokemon Solid', sans-serif;
+    font-size: 45px;
+    color: #ffcc03;
+    -webkit-text-stroke: 3px #2a75bb;
+}
+
+input {
+    color: white;
+    background-color: rgb(249, 160, 100);
+    text-align: center;
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: bold;
+    opacity: 0.8;
+    box-shadow: 5px 10px 8px #4a4a4a
+}
+
+input::placeholder{
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.fa-solid{
+    color: white;
+}
+
+p.number{
+    font-weight: bold;
+}
+
+.selects {
+    display: flex;
+    justify-content: center;
+}
+
+select {
+    text-align: center;
+    margin: 10px;
+    padding: 5px;
+    width: 6%;
+    border: none;
+    background: none;
+    color: white;
+    font-weight: bold;
+    opacity: 0.8;
+    background-color: rgba(143, 110, 218, 0.6);
+    box-shadow: 5px 10px 8px #4a4a4a;
+    border-radius: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flip-card {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: 300px;
+    height: 300px;   
+    perspective: 1000px;
+    border-radius: 15px;
+}
+  
+.flip-card-inner {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 15px;
+}
+  
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+  
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 15px;
+}
+  
+.flip-card-front {
+    background-color: transparent;
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: #3f89ba;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.spinner {
+    border: solid 4px rgb(135, 205, 251);
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
